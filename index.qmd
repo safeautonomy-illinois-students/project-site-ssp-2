@@ -1,5 +1,5 @@
 ---
-pagetitle: "Your Project Title"
+pagetitle: "Home"
 format:
   html:
     toc: false
@@ -8,33 +8,33 @@ format:
 
 ::: {.hero-section}
 
-# Your Project Title Here {.title}
+# Mad Max F1Tenth {.title}
 
 ::: {.subtitle}
-A catchy one-line description of your project
+Using sensors and controllers to autonomously drive an F1Tenth car around the track as fast and safely as possible.
 :::
 
 ::: {.author-list}
 
-[**Author One**](https://example.com)^1^,
-[**Author Two**](https://example.com)^2^,
-[**Author Three**](https://example.com)^1,2^
+[**Pranav Balasubramanian**](https://github.com/pranav-balasubramanian)^1^,
+[**Siddarth Pattisapu**](https://github.com/sp110-ece)^2^,
+[**Soumil Kushwaha**](https://example.com)^1,2^
 
 :::
 
 ::: {.affiliation-list}
 
-^1^University Name,  ^2^Research Lab / Company
+^1^University of Illinois Urbana-Champaign,  ^2^ECE 484 - Principles of Safe Autonomy
 
 :::
 
 ::: {.button-row}
 
-[[{{< fa file-pdf >}} Paper]{.btn-text}](https://arxiv.org/pdf/XXXX.XXXXX){.btn .btn-primary}
-[[{{< fa brands arxiv >}} arXiv]{.btn-text}](https://arxiv.org/abs/XXXX.XXXXX){.btn .btn-primary}
+<!-- [[{{< fa file-pdf >}} Paper]{.btn-text}](https://arxiv.org/pdf/XXXX.XXXXX){.btn .btn-primary} -->
+<!-- [[{{< fa brands arxiv >}} arXiv]{.btn-text}](https://arxiv.org/abs/XXXX.XXXXX){.btn .btn-primary} -->
 [[{{< fa video >}} Video]{.btn-text}](https://www.youtube.com/watch?v=cSQTZoZPJzs){.btn .btn-primary}
 [[{{< fa brands github >}} Code]{.btn-text}](https://github.com/){.btn .btn-primary}
-[[{{< fa database >}} Data]{.btn-text}](https://example.com){.btn .btn-primary}
+<!-- [[{{< fa database >}} Data]{.btn-text}](https://example.com){.btn .btn-primary} -->
 
 :::
 
@@ -50,7 +50,7 @@ A catchy one-line description of your project
 ::: {.hero-teaser}
 
 <!-- Option A: Use a static image as the teaser -->
-![Teaser figure showing your method overview or key result.](static/images/placeholder-teaser.svg){.teaser-img}
+![Block Diagram](static/images/final_flowchart.png){.teaser-img}
 
 <!-- Option B: Embed a video teaser (uncomment below, comment out image above)
 {{< video static/videos/teaser.mp4 >}}
@@ -70,16 +70,12 @@ A catchy one-line description of your project
 ## Abstract {.section-title}
 
 ::: {.abstract-text}
-Replace this text with your project abstract. Describe the problem you are
-solving, the key insight or contribution of your work, and the main results.
-Keep it concise — typically 150–250 words. You can use **bold** and *italic*
-formatting to emphasize key terms.
+This project develops an autonomous control system for an **F1Tenth race car** to complete a three-lap **time trial** as quickly and reliably as possible. The primary challenge is enabling the vehicle to navigate a track at high speed while avoiding collisions using only onboard sensors such as **LiDAR, camera, and IMU**. Because penalties are applied for crashes and rescues, the system must balance **speed, stability, and safety**.
 
-For example: We present a novel approach to [task] that achieves
-state-of-the-art results on [benchmark]. Our method leverages [key technique]
-to overcome [limitation of prior work]. Experiments demonstrate that our
-approach outperforms existing methods by [metric improvement] while requiring
-[efficiency gain].
+Our approach focuses on building a modular autonomous driving pipeline consisting of **perception, localization, path planning, and control**. LiDAR data is used to detect track boundaries and obstacles, allowing the system to estimate the drivable corridor. From this information, a path planning module determines an optimal trajectory along the track center while accounting for curvature and available space. A **pure pursuit controller** then computes steering commands based on a lookahead point along the planned path, while a speed controller adjusts velocity depending on track conditions and turning radius.
+
+The system is developed and tested within the F1Tenth simulator before deployment on the physical vehicle. Through simulation experiments and iterative tuning, we aim to achieve fast lap times while maintaining robust performance under varying track conditions. The final goal is a reliable autonomous racing system capable of completing the course with **minimal penalties and competitive completion times**.
+
 :::
 
 :::
@@ -104,7 +100,7 @@ approach outperforms existing methods by [metric improvement] while requiring
 <!-- ============================================================ -->
 <!-- RESULTS GALLERY -->
 <!-- ============================================================ -->
-
+<!--
 ::: {.section-container}
 
 ## Results {.section-title}
@@ -131,12 +127,12 @@ reader should observe and why it matters.
 :::
 
 :::
-
+-->
 
 <!-- ============================================================ -->
 <!-- QUALITATIVE COMPARISONS -->
 <!-- ============================================================ -->
-
+<!--
 ::: {.section-container}
 
 ## Qualitative Comparisons {.section-title}
@@ -163,12 +159,12 @@ what should the reader look for in the side-by-side results.
 :::
 
 :::
-
+-->
 
 <!-- ============================================================ -->
 <!-- INTERACTIVE SLIDER (Optional) -->
 <!-- ============================================================ -->
-
+<!--
 ::: {.section-container}
 
 ## Interpolation Demo {.section-title}
@@ -200,7 +196,7 @@ interactive slider here. The example below shows how to set one up.
 :::
 
 :::
-
+-->
 
 <!-- ============================================================ -->
 <!-- RELATED WORK -->
@@ -214,11 +210,11 @@ interactive slider here. The example below shows how to set one up.
 
 Here are some related works in this area:
 
-- [Related Paper 1](https://example.com) introduces an idea similar to ours for [topic].
-- [Related Paper 2](https://example.com) also addresses [problem] using [approach].
-- [Related Paper 3](https://example.com) proposes [technique] which is complementary to our method.
+- [F1tenth Autonomous Racing With Offline Reinforcement Learning Methods](https://arxiv.org/abs/2408.04198) introduces an idea similar to ours for Autonomous F1Tenth racing using reinforcement learning.
+<!-- - [Related Paper 2](https://example.com) also addresses [problem] using [approach]. -->
+<!-- - [Related Paper 3](https://example.com) proposes [technique] which is complementary to our method. -->
 
-Check out [this survey](https://example.com) for a comprehensive overview of the field.
+<!-- Check out [this survey](https://example.com) for a comprehensive overview of the field. -->
 :::
 
 :::
@@ -233,10 +229,9 @@ Check out [this survey](https://example.com) for a comprehensive overview of the
 ## BibTeX {.section-title}
 
 ```bibtex
-@article{yourname2026project,
-  author    = {Author One and Author Two and Author Three},
-  title     = {Your Project Title Here},
-  journal   = {Conference or Journal Name},
+@article{MadMaxF1Tenth,
+  author    = {Pranav Balasubramanian and Siddarth Pattisapu and Soumil Kushwaha},
+  title     = {Mad Max F1Tenth Racer},
   year      = {2026},
 }
 ```

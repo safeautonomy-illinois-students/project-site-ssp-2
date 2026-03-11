@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Project Title"
+  title: "Mad Max F1Tenth"
   navbar:
     background: light
     left:

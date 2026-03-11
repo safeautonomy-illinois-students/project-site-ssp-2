@@ -2,57 +2,36 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Your Project Title Here",
+    "title": "Mad Max F1Tenth",
     "section": "",
-    "text": "A catchy one-line description of your project\n\n\nAuthor One1, Author Two2, Author Three1,2\n\n\n1University Name, 2Research Lab / Company\n\n\n Paper  arXiv  Video  Code  Data"
+    "text": "Using sensors and controllers to autonomously drive an F1Tenth car around the track as fast and safely as possible.\n\n\nPranav Balasubramanian1, Siddarth Pattisapu2, Soumil Kushwaha1,2\n\n\n1University of Illinois Urbana-Champaign, 2ECE 484 - Principles of Safe Autonomy\n\n\n\n\n Video  Code"
   },
   {
     "objectID": "index.html#abstract",
     "href": "index.html#abstract",
-    "title": "Your Project Title Here",
+    "title": "Mad Max F1Tenth",
     "section": "Abstract",
-    "text": "Abstract\n\nReplace this text with your project abstract. Describe the problem you are solving, the key insight or contribution of your work, and the main results. Keep it concise — typically 150–250 words. You can use bold and italic formatting to emphasize key terms.\nFor example: We present a novel approach to [task] that achieves state-of-the-art results on [benchmark]. Our method leverages [key technique] to overcome [limitation of prior work]. Experiments demonstrate that our approach outperforms existing methods by [metric improvement] while requiring [efficiency gain]."
+    "text": "Abstract\n\nThis project develops an autonomous control system for an F1Tenth race car to complete a three-lap time trial as quickly and reliably as possible. The primary challenge is enabling the vehicle to navigate a track at high speed while avoiding collisions using only onboard sensors such as LiDAR, camera, and IMU. Because penalties are applied for crashes and rescues, the system must balance speed, stability, and safety.\nOur approach focuses on building a modular autonomous driving pipeline consisting of perception, localization, path planning, and control. LiDAR data is used to detect track boundaries and obstacles, allowing the system to estimate the drivable corridor. From this information, a path planning module determines an optimal trajectory along the track center while accounting for curvature and available space. A pure pursuit controller then computes steering commands based on a lookahead point along the planned path, while a speed controller adjusts velocity depending on track conditions and turning radius.\nThe system is developed and tested within the F1Tenth simulator before deployment on the physical vehicle. Through simulation experiments and iterative tuning, we aim to achieve fast lap times while maintaining robust performance under varying track conditions. The final goal is a reliable autonomous racing system capable of completing the course with minimal penalties and competitive completion times."
   },
   {
     "objectID": "index.html#video",
     "href": "index.html#video",
-    "title": "Your Project Title Here",
+    "title": "Mad Max F1Tenth",
     "section": "Video",
     "text": "Video"
   },
   {
-    "objectID": "index.html#results",
-    "href": "index.html#results",
-    "title": "Your Project Title Here",
-    "section": "Results",
-    "text": "Results\n\nProvide a brief description of the results shown below. Explain what the reader should observe and why it matters.\n\n\n\n\n\n\nResult 1 caption\n\n\n\n\n\n\n\nResult 2 caption\n\n\n\n\n\n\n\nResult 3 caption"
-  },
-  {
-    "objectID": "index.html#qualitative-comparisons",
-    "href": "index.html#qualitative-comparisons",
-    "title": "Your Project Title Here",
-    "section": "Qualitative Comparisons",
-    "text": "Qualitative Comparisons\n\nDescribe the comparison setup — which baselines are you comparing against, and what should the reader look for in the side-by-side results.\n\n\n\n\n\n\nOurs\n\n\nOurs\n\n\n\n\n\nBaseline A\n\n\nBaseline A"
-  },
-  {
-    "objectID": "index.html#interpolation-demo",
-    "href": "index.html#interpolation-demo",
-    "title": "Your Project Title Here",
-    "section": "Interpolation Demo",
-    "text": "Interpolation Demo\n\nIf your method supports interpolation or continuous control, you can add an interactive slider here. The example below shows how to set one up.\n\n\n\n\n\n\nStart\n\n\n\n\n\nEnd\n\n\n\n\n\n50%"
-  },
-  {
     "objectID": "index.html#related-work",
     "href": "index.html#related-work",
-    "title": "Your Project Title Here",
+    "title": "Mad Max F1Tenth",
     "section": "Related Work",
-    "text": "Related Work\n\nHere are some related works in this area:\n\nRelated Paper 1 introduces an idea similar to ours for [topic].\nRelated Paper 2 also addresses [problem] using [approach].\nRelated Paper 3 proposes [technique] which is complementary to our method.\n\nCheck out this survey for a comprehensive overview of the field."
+    "text": "Related Work\n\nHere are some related works in this area:\n\nF1tenth Autonomous Racing With Offline Reinforcement Learning Methods introduces an idea similar to ours for Autonomous F1Tenth racing using reinforcement learning."
   },
   {
     "objectID": "index.html#bibtex",
     "href": "index.html#bibtex",
-    "title": "Your Project Title Here",
+    "title": "Mad Max F1Tenth",
     "section": "BibTeX",
-    "text": "BibTeX\n@article{yourname2026project,\n  author    = {Author One and Author Two and Author Three},\n  title     = {Your Project Title Here},\n  journal   = {Conference or Journal Name},\n  year      = {2026},\n}"
+    "text": "BibTeX\n@article{MadMaxF1Tenth,\n  author    = {Pranav Balasubramanian and Siddarth Pattisapu and Soumil Kushwaha},\n  title     = {Mad Max F1Tenth Racer},\n  year      = {2026},\n}"
   }
 ]
