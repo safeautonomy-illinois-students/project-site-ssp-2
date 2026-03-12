@@ -91,12 +91,37 @@ The system is developed and tested within the F1Tenth simulator before deploymen
 
 ::: {.video-container}
 <!-- Replace with your YouTube or local video embed -->
-{{< video https://www.youtube.com/embed/cSQTZoZPJzs >}}
+{{< video https://www.youtube.com/embed/cErKu-v1KWg >}}
 :::
 
 :::
 
+<!-- ============================================================ -->
+<!-- TEAM WORKLOAD -->
+<!-- ============================================================ -->
 
+::: {.section-container}
+
+## Team Responsibilities {.section-title}
+
+::: {.abstract-text}
+
+To develop the autonomous racing system efficiently, our team will divide responsibilities across the major modules of the pipeline while collaborating during integration and testing.
+
+**Pranav – Perception & Sensor Evaluation:**  
+Implementing algorithms to detect track boundaries and obstacles using **LiDAR and camera data**. Testing both sensors to determine which provides more reliable track detection based on **accuracy, robustness, and computational efficiency**.
+
+**Siddarth – Localization & Path Planning:**  
+Estimating the vehicle’s position and generates the **optimal path or centerline trajectory** through the track using outputs from the perception module.
+
+**Soumil – Control & System Integration:**  
+Implementing the **pure pursuit steering controller and speed control**, and integrating all modules to ensure the full system runs reliably in simulation and on the physical car.
+
+We will all collaborate on **testing, debugging, and performance tuning**, using simulation experiments to improve lap times, stability, and overall system reliability.
+
+:::
+
+:::
 <!-- ============================================================ -->
 <!-- RESULTS GALLERY -->
 <!-- ============================================================ -->

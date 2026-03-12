@@ -62,7 +62,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -77,17 +76,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-067f8ab80d092ae3595f7402c2c9b667.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c7ab57aa33037bad7520c6cb9ec7d6ec.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -114,47 +113,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Mad Max F1Tenth</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-more-research" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">More Research</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-more-research">    
-        <li>
-    <a class="dropdown-item" href="https://example.com">
- <span class="dropdown-text">Project 1</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://example.com">
- <span class="dropdown-text">Project 2</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -216,7 +179,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="section-title anchored" data-anchor-id="video">Video</h2>
 <div class="video-container">
 <!-- Replace with your YouTube or local video embed -->
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/cSQTZoZPJzs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/cErKu-v1KWg" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- TEAM WORKLOAD -->
+<!-- ============================================================ -->
+<section id="team-responsibilities" class="level2 section-title section-container">
+<h2 class="section-title anchored" data-anchor-id="team-responsibilities">Team Responsibilities</h2>
+<div class="abstract-text">
+<p>To develop the autonomous racing system efficiently, our team will divide responsibilities across the major modules of the pipeline while collaborating during integration and testing.</p>
+<p><strong>Pranav – Perception &amp; Sensor Evaluation:</strong><br>
+Implementing algorithms to detect track boundaries and obstacles using <strong>LiDAR and camera data</strong>. Testing both sensors to determine which provides more reliable track detection based on <strong>accuracy, robustness, and computational efficiency</strong>.</p>
+<p><strong>Siddarth – Localization &amp; Path Planning:</strong><br>
+Estimating the vehicle’s position and generates the <strong>optimal path or centerline trajectory</strong> through the track using outputs from the perception module.</p>
+<p><strong>Soumil – Control &amp; System Integration:</strong><br>
+Implementing the <strong>pure pursuit steering controller and speed control</strong>, and integrating all modules to ensure the full system runs reliably in simulation and on the physical car.</p>
+<p>We will all collaborate on <strong>testing, debugging, and performance tuning</strong>, using simulation experiments to improve lap times, stability, and overall system reliability.</p>
 </div>
 </section>
 <!-- ============================================================ -->

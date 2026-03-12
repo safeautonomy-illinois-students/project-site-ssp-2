@@ -21,6 +21,13 @@
     "text": "Video"
   },
   {
+    "objectID": "index.html#team-responsibilities",
+    "href": "index.html#team-responsibilities",
+    "title": "Mad Max F1Tenth",
+    "section": "Team Responsibilities",
+    "text": "Team Responsibilities\n\nTo develop the autonomous racing system efficiently, our team will divide responsibilities across the major modules of the pipeline while collaborating during integration and testing.\nPranav – Perception & Sensor Evaluation:\nImplementing algorithms to detect track boundaries and obstacles using LiDAR and camera data. Testing both sensors to determine which provides more reliable track detection based on accuracy, robustness, and computational efficiency.\nSiddarth – Localization & Path Planning:\nEstimating the vehicle’s position and generates the optimal path or centerline trajectory through the track using outputs from the perception module.\nSoumil – Control & System Integration:\nImplementing the pure pursuit steering controller and speed control, and integrating all modules to ensure the full system runs reliably in simulation and on the physical car.\nWe will all collaborate on testing, debugging, and performance tuning, using simulation experiments to improve lap times, stability, and overall system reliability."
+  },
+  {
     "objectID": "index.html#related-work",
     "href": "index.html#related-work",
     "title": "Mad Max F1Tenth",
