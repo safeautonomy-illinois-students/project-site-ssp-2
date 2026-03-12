@@ -71,7 +71,7 @@ Using sensors and controllers to autonomously drive an F1Tenth car around the tr
 ## Abstract {.section-title}
 
 ::: {.abstract-text}
-This project develops an autonomous control system for an **F1Tenth race car** to complete a three-lap **time trial** as quickly and reliably as possible. The primary challenge is enabling the vehicle to navigate a track at high speed while avoiding collisions using only onboard sensors such as **LiDAR, camera, and IMU**. Because penalties are applied for crashes and rescues, the system must balance **speed, stability, and safety**.
+This project develops an autonomous control system for an **F1Tenth race car** to complete a timed lap as quickly and reliably as possible. The primary challenge is enabling the vehicle to navigate a track at high speed while avoiding collisions using only onboard sensors such as **LiDAR, camera, and IMU**. Because penalties are applied for crashes and rescues, the system must balance **speed, stability, and safety**.
 
 Our approach focuses on building a modular autonomous driving pipeline consisting of **perception, localization, path planning, and control**. LiDAR data is used to detect track boundaries and obstacles, allowing the system to estimate the drivable corridor. From this information, a path planning module determines an optimal trajectory along the track center while accounting for curvature and available space. A **pure pursuit controller** then computes steering commands based on a lookahead point along the planned path, while a speed controller adjusts velocity depending on track conditions and turning radius.
 
