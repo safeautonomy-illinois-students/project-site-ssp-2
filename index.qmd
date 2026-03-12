@@ -61,6 +61,7 @@ Using sensors and controllers to autonomously drive an F1Tenth car around the tr
 :::
 
 
+
 <!-- ============================================================ -->
 <!-- ABSTRACT -->
 <!-- ============================================================ -->
@@ -80,6 +81,33 @@ The system is developed and tested within the F1Tenth simulator before deploymen
 
 :::
 
+<!-- ============================================================ -->
+<!-- SYSTEM APPROACH -->
+<!-- ============================================================ -->
+
+::: {.section-container}
+
+## System Approach {.section-title}
+
+::: {.content-text}
+
+Our system will be built as a simple pipeline that takes sensor data from the car, understands the track around it, plans a path to follow, and then controls the vehicle to stay on that path.
+
+**Perception:**  
+- We use sensor data from the LiDAR and camera to detect the track boundaries and nearby obstacles. This lets us estimate the drivable region of the track at any given moment.
+
+**Localization:**  
+- Using simulator feedback and information from the perception module, the car estimates its position and orientation relative to the track.
+
+**Path Planning:**  
+- From the detected track boundaries, we generate a **centerline waypoint path** that the car should follow. This path keeps the vehicle safely within the lane while still allowing it to move quickly through turns.
+
+**Control:**  
+- To follow the path, we use a **pure pursuit controller** that steers the vehicle toward a lookahead point along the trajectory. The car’s speed is adjusted based on how sharp the upcoming turns are to maintain stability.
+
+:::
+
+:::
 
 <!-- ============================================================ -->
 <!-- OVERVIEW / METHOD VIDEO -->
@@ -105,9 +133,6 @@ The system is developed and tested within the F1Tenth simulator before deploymen
 ## Team Responsibilities {.section-title}
 
 ::: {.abstract-text}
-
-To develop the autonomous racing system efficiently, our team will divide responsibilities across the major modules of the pipeline while collaborating during integration and testing.
-
 **Pranav – Perception & Sensor Evaluation:**  
 Implementing algorithms to detect track boundaries and obstacles using **LiDAR and camera data**. Testing both sensors to determine which provides more reliable track detection based on **accuracy, robustness, and computational efficiency**.
 
@@ -118,6 +143,37 @@ Estimating the vehicle’s position and generates the **optimal path or centerli
 Implementing the **pure pursuit steering controller and speed control**, and integrating all modules to ensure the full system runs reliably in simulation and on the physical car.
 
 We will all collaborate on **testing, debugging, and performance tuning**, using simulation experiments to improve lap times, stability, and overall system reliability.
+
+:::
+
+:::
+
+<!-- ============================================================ -->
+<!-- SENSOR EVALUATION -->
+<!-- ============================================================ -->
+
+::: {.section-container}
+
+## Sensor Evaluation {.section-title}
+
+::: {.content-text}
+
+One of our goals is to determine whether **LiDAR or camera data** is more reliable for detecting track limits.
+
+To do this, we will test both sensing methods in the simulator and compare their performance.
+
+With **LiDAR**, we will use distance measurements to detect walls and estimate the track corridor from the scan data.
+
+With the **camera**, we will experiment with image-based methods to detect lane boundaries or track edges.
+
+We will compare the two approaches based on:
+
+- How accurately they detect the track limits  
+- How stable the detection is while the car is moving  
+- How sensitive they are to noise or lighting changes  
+- How efficiently they run in real time
+
+This will help us decide whether our final system should rely mainly on **LiDAR, camera perception, or a combination of both**.
 
 :::
 

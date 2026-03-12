@@ -14,6 +14,13 @@
     "text": "Abstract\n\nThis project develops an autonomous control system for an F1Tenth race car to complete a three-lap time trial as quickly and reliably as possible. The primary challenge is enabling the vehicle to navigate a track at high speed while avoiding collisions using only onboard sensors such as LiDAR, camera, and IMU. Because penalties are applied for crashes and rescues, the system must balance speed, stability, and safety.\nOur approach focuses on building a modular autonomous driving pipeline consisting of perception, localization, path planning, and control. LiDAR data is used to detect track boundaries and obstacles, allowing the system to estimate the drivable corridor. From this information, a path planning module determines an optimal trajectory along the track center while accounting for curvature and available space. A pure pursuit controller then computes steering commands based on a lookahead point along the planned path, while a speed controller adjusts velocity depending on track conditions and turning radius.\nThe system is developed and tested within the F1Tenth simulator before deployment on the physical vehicle. Through simulation experiments and iterative tuning, we aim to achieve fast lap times while maintaining robust performance under varying track conditions. The final goal is a reliable autonomous racing system capable of completing the course with minimal penalties and competitive completion times."
   },
   {
+    "objectID": "index.html#system-approach",
+    "href": "index.html#system-approach",
+    "title": "Mad Max F1Tenth",
+    "section": "System Approach",
+    "text": "System Approach\n\nOur system will be built as a simple pipeline that takes sensor data from the car, understands the track around it, plans a path to follow, and then controls the vehicle to stay on that path.\nPerception:\n- We use sensor data from the LiDAR and camera to detect the track boundaries and nearby obstacles. This lets us estimate the drivable region of the track at any given moment.\nLocalization:\n- Using simulator feedback and information from the perception module, the car estimates its position and orientation relative to the track.\nPath Planning:\n- From the detected track boundaries, we generate a centerline waypoint path that the car should follow. This path keeps the vehicle safely within the lane while still allowing it to move quickly through turns.\nControl:\n- To follow the path, we use a pure pursuit controller that steers the vehicle toward a lookahead point along the trajectory. The car’s speed is adjusted based on how sharp the upcoming turns are to maintain stability."
+  },
+  {
     "objectID": "index.html#video",
     "href": "index.html#video",
     "title": "Mad Max F1Tenth",
@@ -25,7 +32,14 @@
     "href": "index.html#team-responsibilities",
     "title": "Mad Max F1Tenth",
     "section": "Team Responsibilities",
-    "text": "Team Responsibilities\n\nTo develop the autonomous racing system efficiently, our team will divide responsibilities across the major modules of the pipeline while collaborating during integration and testing.\nPranav – Perception & Sensor Evaluation:\nImplementing algorithms to detect track boundaries and obstacles using LiDAR and camera data. Testing both sensors to determine which provides more reliable track detection based on accuracy, robustness, and computational efficiency.\nSiddarth – Localization & Path Planning:\nEstimating the vehicle’s position and generates the optimal path or centerline trajectory through the track using outputs from the perception module.\nSoumil – Control & System Integration:\nImplementing the pure pursuit steering controller and speed control, and integrating all modules to ensure the full system runs reliably in simulation and on the physical car.\nWe will all collaborate on testing, debugging, and performance tuning, using simulation experiments to improve lap times, stability, and overall system reliability."
+    "text": "Team Responsibilities\n\nPranav – Perception & Sensor Evaluation:\nImplementing algorithms to detect track boundaries and obstacles using LiDAR and camera data. Testing both sensors to determine which provides more reliable track detection based on accuracy, robustness, and computational efficiency.\nSiddarth – Localization & Path Planning:\nEstimating the vehicle’s position and generates the optimal path or centerline trajectory through the track using outputs from the perception module.\nSoumil – Control & System Integration:\nImplementing the pure pursuit steering controller and speed control, and integrating all modules to ensure the full system runs reliably in simulation and on the physical car.\nWe will all collaborate on testing, debugging, and performance tuning, using simulation experiments to improve lap times, stability, and overall system reliability."
+  },
+  {
+    "objectID": "index.html#sensor-evaluation",
+    "href": "index.html#sensor-evaluation",
+    "title": "Mad Max F1Tenth",
+    "section": "Sensor Evaluation",
+    "text": "Sensor Evaluation\n\nOne of our goals is to determine whether LiDAR or camera data is more reliable for detecting track limits.\nWith LiDAR, we will use distance measurements to detect walls and estimate the track corridor from the scan data.\nWith the camera, we will experiment with image-based methods to detect lane boundaries or track edges.\nWe will compare the two approaches based on:\n\nHow accurately they detect the track limits\n\nHow stable the detection is while the car is moving\n\nHow sensitive they are to noise or lighting changes\n\nHow efficiently they run in real time\n\nThis will help us decide whether our final system should rely mainly on LiDAR, camera perception, or a combination of both."
   },
   {
     "objectID": "index.html#related-work",

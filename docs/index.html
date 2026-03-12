@@ -173,6 +173,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 <!-- ============================================================ -->
+<!-- SYSTEM APPROACH -->
+<!-- ============================================================ -->
+<section id="system-approach" class="level2 section-title section-container">
+<h2 class="section-title anchored" data-anchor-id="system-approach">System Approach</h2>
+<div class="content-text">
+<p>Our system will be built as a simple pipeline that takes sensor data from the car, understands the track around it, plans a path to follow, and then controls the vehicle to stay on that path.</p>
+<p><strong>Perception:</strong><br>
+- We use sensor data from the LiDAR and camera to detect the track boundaries and nearby obstacles. This lets us estimate the drivable region of the track at any given moment.</p>
+<p><strong>Localization:</strong><br>
+- Using simulator feedback and information from the perception module, the car estimates its position and orientation relative to the track.</p>
+<p><strong>Path Planning:</strong><br>
+- From the detected track boundaries, we generate a <strong>centerline waypoint path</strong> that the car should follow. This path keeps the vehicle safely within the lane while still allowing it to move quickly through turns.</p>
+<p><strong>Control:</strong><br>
+- To follow the path, we use a <strong>pure pursuit controller</strong> that steers the vehicle toward a lookahead point along the trajectory. The car’s speed is adjusted based on how sharp the upcoming turns are to maintain stability.</p>
+</div>
+</section>
+<!-- ============================================================ -->
 <!-- OVERVIEW / METHOD VIDEO -->
 <!-- ============================================================ -->
 <section id="video" class="level2 section-title section-container">
@@ -188,7 +205,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="team-responsibilities" class="level2 section-title section-container">
 <h2 class="section-title anchored" data-anchor-id="team-responsibilities">Team Responsibilities</h2>
 <div class="abstract-text">
-<p>To develop the autonomous racing system efficiently, our team will divide responsibilities across the major modules of the pipeline while collaborating during integration and testing.</p>
 <p><strong>Pranav – Perception &amp; Sensor Evaluation:</strong><br>
 Implementing algorithms to detect track boundaries and obstacles using <strong>LiDAR and camera data</strong>. Testing both sensors to determine which provides more reliable track detection based on <strong>accuracy, robustness, and computational efficiency</strong>.</p>
 <p><strong>Siddarth – Localization &amp; Path Planning:</strong><br>
@@ -196,6 +212,28 @@ Estimating the vehicle’s position and generates the <strong>optimal path or ce
 <p><strong>Soumil – Control &amp; System Integration:</strong><br>
 Implementing the <strong>pure pursuit steering controller and speed control</strong>, and integrating all modules to ensure the full system runs reliably in simulation and on the physical car.</p>
 <p>We will all collaborate on <strong>testing, debugging, and performance tuning</strong>, using simulation experiments to improve lap times, stability, and overall system reliability.</p>
+</div>
+</section>
+<!-- ============================================================ -->
+<!-- SENSOR EVALUATION -->
+<!-- ============================================================ -->
+<section id="sensor-evaluation" class="level2 section-title section-container">
+<h2 class="section-title anchored" data-anchor-id="sensor-evaluation">Sensor Evaluation</h2>
+<div class="content-text">
+<p>One of our goals is to determine whether <strong>LiDAR or camera data</strong> is more reliable for detecting track limits.</p>
+<p>With <strong>LiDAR</strong>, we will use distance measurements to detect walls and estimate the track corridor from the scan data.</p>
+<p>With the <strong>camera</strong>, we will experiment with image-based methods to detect lane boundaries or track edges.</p>
+<p>We will compare the two approaches based on:</p>
+<ul>
+<li>How accurately they detect the track limits<br>
+</li>
+<li>How stable the detection is while the car is moving<br>
+</li>
+<li>How sensitive they are to noise or lighting changes<br>
+</li>
+<li>How efficiently they run in real time</li>
+</ul>
+<p>This will help us decide whether our final system should rely mainly on <strong>LiDAR, camera perception, or a combination of both</strong>.</p>
 </div>
 </section>
 <!-- ============================================================ -->
